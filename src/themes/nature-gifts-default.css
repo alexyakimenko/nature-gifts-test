@@ -1,0 +1,25 @@
+/* Fonts */
+
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Styles */
+
+:root {
+    --main-accent-color: #77A215;
+    --second-accent-color: #47752E;
+    --third-accent-color: #254A10;
+    --least-accent-color: #12668D;
+    --bg-color: #F8F8F8;
+    --main-text-color: #0D0D0D;
+    --selected-color: #F3F8FF;
+
+    --cards-shadow: 2px 6px 10px 2px rgba(29, 143, 190, 0.1);
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--bg-color);
+
+    padding-bottom: 50px;
+}
