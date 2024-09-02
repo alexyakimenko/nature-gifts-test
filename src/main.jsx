@@ -5,4 +5,6 @@ import "./main.css"
 
 import "./themes/nature-gifts-default.css"
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById('root')).render(
+  <App />
+)
