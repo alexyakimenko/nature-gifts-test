@@ -4,7 +4,7 @@ export const FavoritesWrapper = styled.div`
     padding-top: 16px;
     padding-bottom: 32px;
 
-    background-color: #fff;
+    background-color: var(--bg-section-color);
 
     border-radius: 0 0 16px 16px;
 `
@@ -38,9 +38,9 @@ export const NoContent = styled.div`
     a {
         display: inline-block;
 
-        background-color: #77A215;
+        background-color: var(--main-accent-color);
 
-        color: #fff;
+        color: var(--bg-section-color);
         text-decoration: none;
         padding: 7px 48px;
 

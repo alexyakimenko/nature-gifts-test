@@ -4,6 +4,8 @@ const Homepage = () => {
   return (
     <>
         <Link to="/favorites">Избранные</Link>
+        <br />
+        <Link to="/catalog">Каталог</Link>
     </>
   )
 }
