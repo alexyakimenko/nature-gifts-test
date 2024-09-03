@@ -1,9 +1,9 @@
 import { Container } from "../layout/Container.styled"
-import { History, HistoryWrapper, Content } from "./History.styled"
-import ItemCard from "./item-card"
+import { History, HistoryWrapper } from "./History.styled"
 
 import data from "./data.json"
 import Spinner from "../spinner"
+import CardGrid from "../card-grid"
 
 const HistoryComponent = () => {
   return (
@@ -11,13 +11,7 @@ const HistoryComponent = () => {
       <Container>
         <History>
           <h2>Просмотренные товары</h2>
-          <Content>
-            {
-              data.map(item => (
-                <ItemCard key={item.id} data={item}/>
-              ))
-            }
-          </Content>
+          <CardGrid data={data} />
           <Spinner />
         </History>
       </Container>

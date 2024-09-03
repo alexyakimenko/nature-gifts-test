@@ -17,15 +17,8 @@ export const History = styled.section`
     h2 {
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 14px;
     }
 `
 
-export const Content = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 5px;
-
-    margin-top: 15px;
-`
 
