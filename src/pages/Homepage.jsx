@@ -4,7 +4,7 @@ const Homepage = () => {
   return (
     <>
         <Link to="/favorites">Избранные</Link>
-        <br />
+        <br /> <br />
         <Link to="/catalog">Каталог</Link>
     </>
   )
