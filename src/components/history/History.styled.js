@@ -12,6 +12,8 @@ export const HistoryWrapper = styled.div`
 `
 
 export const History = styled.section`
+    text-align: center;
+
     h2 {
         font-size: 20px;
         font-weight: bold;

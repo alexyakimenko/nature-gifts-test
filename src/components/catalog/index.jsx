@@ -1,5 +1,8 @@
 import { Catalog, CatalogWrapper, Content, Info } from "./Catalog.styled"
 import { Container } from "../layout/Container.styled"
+import CategoryCard from "../category-card"
+
+import data from "./data.json"
 
 const CatalogComponent = () => {
   return (
@@ -7,10 +10,15 @@ const CatalogComponent = () => {
         <Container>
             <Catalog>
                 <Info>
-                    gigi
+                    <p>Средства для лица</p>
+                    <h2>Маски и скрабы</h2>
                 </Info>
                 <Content>
-                    hihi
+                    {
+                        data.map(item => (
+                            <CategoryCard key={item.id} data={item}/>
+                        ))
+                    }
                 </Content>
             </Catalog>
         </Container>

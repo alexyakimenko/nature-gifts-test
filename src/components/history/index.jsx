@@ -3,6 +3,7 @@ import { History, HistoryWrapper, Content } from "./History.styled"
 import ItemCard from "./item-card"
 
 import data from "./data.json"
+import Spinner from "../spinner"
 
 const HistoryComponent = () => {
   return (
@@ -17,6 +18,7 @@ const HistoryComponent = () => {
               ))
             }
           </Content>
+          <Spinner />
         </History>
       </Container>
     </HistoryWrapper>
