@@ -4,4 +4,6 @@
 
 body {
     background-color: var(--main-accent-color);
+
+    padding-bottom: 50px;
 }
