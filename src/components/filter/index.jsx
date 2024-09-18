@@ -7,9 +7,16 @@ import SortSvg from "../../assets/sort.svg?react"
 import FilterSvg from "../../assets/filter.svg?react"
 import CrossSvg from "../../assets/cross.svg?react"
 
-import data from "./data.json"
+import useNatureGiftsService from "../../services/NatureGiftsService"
+import { useEffect, useState } from "react"
 
 const FilterComponent = () => {
+    const {loading, error, getCategoryProducts} = useNatureGiftsService()
+    const [data, setData] = useState({})
+
+    useEffect(() => {
+        getCategoryProducts(78).then(res => setData(res.data))
+    }, [])
   return (
     <FilterWrapper>
         <Container>
@@ -27,8 +34,7 @@ const FilterComponent = () => {
                 </SelectedFilters>
             </Filter>
             <Result>
-                <CardGrid data={data} />
-                <Spinner />
+                {loading ? <Spinner /> : <CardGrid data={data} />}
             </Result>
         </Container>
     </FilterWrapper>

@@ -1,27 +1,43 @@
 import { useState } from "react"
 
 import { Card, Head, Info, Heart, Price, CartBtn } from "./ItemCard.styled"
+import useNatureGiftsService from "../../services/NatureGiftsService"
 
-const ItemCard = ({data}) => {
-  const [isLiked, setIsLiked] = useState(false)
+const ItemCard = (props) => {
+  const {addFavorite, deleteFavorite} = useNatureGiftsService()
+
+  const {data} = props
+  const [isLiked, setIsLiked] = useState(props.isLiked ?? false)
+  
+
+  const handleAddFavorite = () => {
+    setIsLiked(!isLiked)
+
+    if(isLiked) {
+      deleteFavorite(data.id)
+    } else {
+      addFavorite(data.id)
+    }
+    
+  }
 
   return (
     <Card>
-        <Head $background={data.background}>
+        <Head $background={data.image}>
             <span style={{
-              visibility: data.promo ? "visible" : "hidden"
-            }}>{data.promo}</span>
+              visibility: data.labels[0] ? "visible" : "hidden"
+            }}>{data.labels[0]?.value}</span>
             <Heart 
               $isLiked={isLiked}
-              onClick={() => setIsLiked(!isLiked)}
+              onClick={handleAddFavorite}
             />
         </Head>
         <Info>
-          <h3>{data.title}</h3>
-          <p>{data.seller}</p>
+          <h3>{data.name.length > 32 ? data.name.substring(0, 32) + "..." : data.name}</h3>
+          <p>{data?.seller}</p>
           <Price>
-            <span id="promo-price">{data.promo_price}</span>
-            <span id="price">{data.price}</span>
+            <span id="promo-price">{data.price_html}</span>
+            <span id="price">{data.compare_price_html}</span>
           </Price>
         </Info>
         <CartBtn>В корзину</CartBtn>

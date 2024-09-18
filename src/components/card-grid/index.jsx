@@ -6,7 +6,7 @@ const CardGrid = ({data}) => {
     <Grid>
         {
             data.map(item => (
-            <ItemCard key={item.id} data={item}/>
+              <ItemCard key={item.id} data={item} isLiked={item.isLiked}/>
             ))
         }
     </Grid>

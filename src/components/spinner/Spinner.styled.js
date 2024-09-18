@@ -19,6 +19,9 @@ const spinAnimation = keyframes`
 
 export const Spinner = styled(SpinnerSvg)`
     fill: var(--second-accent-color);
+    margin: 16px;
+    justify-self: center;
+    align-self: center;
 
     path {
         transform-origin: center;

@@ -10,9 +10,12 @@ export const FavoritesWrapper = styled.div`
 `
 
 export const Favorites = styled.section`
+    display: flex;
+    flex-direction: column;
     h2 {
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 14px;
     }
 `
 

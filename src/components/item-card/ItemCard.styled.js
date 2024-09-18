@@ -18,6 +18,9 @@ export const Head = styled.div`
     
     padding: 11px;
     background-image: url(${props => props.$background});
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     border-radius: 6px 6px 0 0;
 
