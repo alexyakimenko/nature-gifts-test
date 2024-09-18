@@ -17,3 +17,4 @@ VITE_AUTH=authorization_key
 - [ ] Multiple labels
 - [ ] Brand name in api
 - [ ] Is Item in favorites
+- [ ] Check React Native compatibility
