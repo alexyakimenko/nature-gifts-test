@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import HeartSvg from "../../assets/card/heart.svg?react"
+// temp solution
+import * as path from 'path';
 
 export const Card = styled.div`
     width: 165px;

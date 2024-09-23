@@ -10,6 +10,8 @@ const FavoritesComponent = () => {
   const {loading, error, getFavorites} = useNatureGiftsService()
   const [data, setData] = useState(null)
 
+  const path = import.meta.env.VITE_APP_PATH
+
     useEffect(() => {
       getFavorites().then(res => {
         const favorites = res.data.filter(item => item.id !== null).map(item => {
@@ -26,7 +28,7 @@ const FavoritesComponent = () => {
     const noContent = (
       <NoContent>
         <p>Список избранного пока пуст. Перейдите на главную, чтобы добавить товары.</p>
-        <Link to="/">На главную</Link>
+        <Link to={`${path}/`}>На главную</Link>
       </NoContent>
     )
 

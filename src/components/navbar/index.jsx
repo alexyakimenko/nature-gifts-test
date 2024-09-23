@@ -15,15 +15,15 @@ import profile from "../../assets/navbar/profile.svg?react"
 const NavbarComponent = () => {
   
   const location = useLocation();
-
+  const path = import.meta.env.VITE_APP_PATH
   return (
     <NavbarWrapper>
       <Container>
         <Navbar>
             <NavbarItems>
                 <li>
-                  <Link to="/">
-                    <NavbarItem element={home} active={location.pathname === "/"} />
+                  <Link to={`${path}/`}>
+                    <NavbarItem element={home} active={location.pathname === `${path}/`} />
                   </Link>
                 </li>
                 <li>
@@ -32,8 +32,8 @@ const NavbarComponent = () => {
                   </a>
                 </li>
                 <li>
-                  <Link to="/favorites">
-                    <NavbarItem element={heart} active={location.pathname === "/favorites"} />
+                  <Link to={`${path}/favorites`}>
+                    <NavbarItem element={heart} active={location.pathname === `${path}/favorites`} />
                   </Link>
                 </li>
                 <li>

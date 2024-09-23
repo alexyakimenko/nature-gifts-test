@@ -2,7 +2,7 @@ import { Catalog, CatalogWrapper, Content, Info } from "./Catalog.styled"
 import { Container } from "../layout/Container.styled"
 import CategoryCard from "../category-card"
 
-import data from "./data.json"
+import data from "./data"
 
 const CatalogComponent = () => {
   return (

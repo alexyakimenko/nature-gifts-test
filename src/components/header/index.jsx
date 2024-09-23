@@ -8,12 +8,13 @@ import IconLeft from "../../assets/header/icon_left.svg?react"
 import { Link } from "react-router-dom"
 
 const HeaderComponent = () => {
+const path = import.meta.env.VITE_APP_PATH
   return (
     <HeaderWrapper>
         <Container>
             <Header>
                 <Masthead>
-                    <Link to="/">
+                    <Link to={`${path}/`}>
                         <img src={logo} alt="Natures Gift Logo" />
                     </Link>
                     <ProfileWrapper href="#">
