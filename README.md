@@ -10,6 +10,7 @@ npm run dev
 ```py
 # .env file
 VITE_AUTH=authorization_key
+VITE_APP_PATH=path_to_app
 ```
 
 ## Todo:
