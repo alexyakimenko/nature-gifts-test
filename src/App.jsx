@@ -6,15 +6,15 @@ import Homepage from "./pages/Homepage"
 import Catalog from "./pages/Catalog"
 
 function App() {
-
+  const path = import.meta.env.VITE_APP_PATH
   return (
     <Router>
       <Header />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="/catalog" element={<Catalog />} />
+        <Route path={`${path}/`} element={<Homepage />} />
+        <Route path={`${path}/favorites`} element={<Favorites />} />
+        <Route path={`${path}/catalog`} element={<Catalog />} />
       </Routes>
     </Router>
   )
